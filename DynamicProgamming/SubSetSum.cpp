@@ -13,7 +13,7 @@ bool isSubSetSum(vector<int> arr, int n, int sum)
     // if the given array element is greater than the sum,then that element has to be excluded.
     if (arr[n-1] > sum)
         return isSubSetSum(arr, n-1, sum);
-    // recurse to check whether target can be reached with or without excluding the current number
+    // recurse to check whether target can be reached with or without including the current number
     return isSubSetSum(arr,n-1,sum) || isSubSetSum(arr, n-1, sum-arr[n-1]);
     
 }
